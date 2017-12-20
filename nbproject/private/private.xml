@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>servidor/pedidos/administrar/index.php</url>
+            <bookmark id="1">
+                <name/>
+                <line>34</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/AppRestaurante/servidor/bdacceso/BD/Insertador.php</file>
+            <file>file:/C:/xampp/htdocs/AppRestaurante/servidor/valoraciones/valoraciones.php</file>
+            <file>file:/C:/xampp/htdocs/AppRestaurante/servidor/bdacceso/BD/Selector.php</file>
+            <file>file:/C:/xampp/htdocs/AppRestaurante/www/app/assets/js/funcionesApp.js</file>
+            <file>file:/C:/xampp/htdocs/AppRestaurante/www/app/assets/js/controlVista.js</file>
+            <file>file:/C:/xampp/htdocs/AppRestaurante/www/app/administrador.html</file>
+            <file>file:/C:/xampp/htdocs/AppRestaurante/servidor/pedidos/realizar/index.php</file>
+        </group>
+    </open-files>
+</project-private>

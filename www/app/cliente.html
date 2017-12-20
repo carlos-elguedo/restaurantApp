@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Restaurante el buen sabor</title>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+            <link rel="stylesheet" href="assets/css/transiciones.css" />
+            <link rel="stylesheet" href="assets/css/main.css" />
+            <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+            <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body>
+	<!-- Wrapper -->
+        <div id="wrapper" class="vista_cliente">
+            
+            <!-- Header -->
+            <header id="header">
+                <div class="inner">
+
+                    <!-- Logo -->
+                    <a class="logo">
+                        <center>
+                        <span id="nombre_mesa" class="title">Mesa</span>
+                        </center>
+                    </a>
+
+                    <!-- Nav -->
+                    <nav>
+			<ul>
+                            <li><a href="#menu">Menu</a></li>
+			</ul>
+                    </nav>
+
+                </div>
+            </header>
+
+
+            <div id="inicio_datos"></div>
+            <div id="servidor"></div>
+            <div id="servidor_datos"></div>
+
+
+            <!-- Menu -->
+            <nav id="menu">
+            <h2>Opciones</h2>
+		<ul>
+                    <li><label id="lateral_platos">Platos</label></li>
+                    <li><label id="lateral_bebidas">Bebidas</label></li>
+                    <li><label id="lateral_estado_pedido">Estado del pedido</label></li>
+                    <li><label id="lateral_valorar_plato">Valorar plato(s)</label></li>
+                    <li><label id="lateral_ayuda">Ayuda</label></li>
+                    <li><label id="lateral_reiniciar">Reiniciar app</label></li>
+                    <li><label class ="lat_cerrar_sesion" id="lateral_cerrar_sesion">Cerrar sesión</label></li>
+		</ul>
+            </nav>
+
+
+
+
+
+            <!-- Main -->
+            <div id="main">
+                <div id="PANTALLA_PLATOS" class="inner">
+                    <header>
+                        <center><p><b>Menú del restaurante - Platos</b></p></center>
+                    <!--<p>Presiona para ver detalles y realizar un pedido</p>-->
+                    </header>
+                    <section>
+                        <div class="12u$" style="max-width:85%; display:inline-block; ">
+                            <input type="text" name="buscar_plato" id="buscar_plato" placeholder="Buscar un plato" style="width:100%">
+                        </div>
+                        <ul class="icons" style="display:inline-block; float:right">
+                            <li>
+                                <a id="boton_buscar_plato" href="#" class="icon style2 fa-search">
+                                    <span class="label">Búsqueda</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <br>
+                    <section id ="menu_platos" class="tiles" style="clear:both">
+                    </section>
+                    <div id="teatro_1">
+                    <dialog id="teatro_ver_plato" class="site-dialog">
+                        <header class="dialog-header">
+                            <h1 id="nombre_plato" style="display: inline">Nombre del plato</h1>
+                            <h1 id="precio_plato" style="float: right; display: inline">$Precio</h1>
+                        </header>
+                        <div class="dialog-content">
+                            <span class="image fit"><img id="imagen_plato" src="images/mesero_banner.jpg" alt=""></span>
+                            <p id="descripcion_plato">Descripción detallada acerca del plato que esta observando.</p>
+                        </div>
+                        <div class="btn-group cf">
+                            <div class="12u$">
+                                <div class="select-wrapper">
+                                    <select name="cantidad-plato" id="cantidad-plato">
+                                        <option value="1">Cantidad: 1</option>
+                                        <option value="2">Cantidad: 2</option>
+                                        <option value="3">Cantidad: 3</option>
+                                        <option value="4">Cantidad: 4</option>
+                                        <option value="5">Cantidad: 5</option>
+                                        <option value="6">Cantidad: 6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            
+                            <div class="12u$">
+                                <div class="textarea-wrapper">
+                                    <textarea name="mensaje_plato" id="mensaje_plato" placeholder="Exprese aquí si tiene alguna sugerencia para recibir este plato, por ejemplo, nivel de sal, o grasa" rows="1" style="overflow: hidden; resize: none; height: 59px; font-size: 12px"></textarea>
+                                </div>
+                            </div>
+                            <div class="12u$">
+                                <ul class="actions">
+                                    <li><input id="PEDIR_PLATO" type="submit" value="Pedir plato" class="special"></li>
+                                    <li><input id="cancel" type="reset" value="Cancelar"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                    </div>
+            <!--fin de la pantalla platos-->
+            </div>
+                
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+            <!-- DIVISION PARA LAS BEBIDAS-->
+            <div id="PANTALLA_BEBIDAS" class="inner" style="display:none">
+                <header>
+                    <center><p><b>Menú del restaurante - Bebidas</b></p></center>
+                    <!--<p>Presiona para ver detalles</p>-->
+                </header>
+                <section>
+                    <div class="12u$" style="max-width:85%; display:inline-block; ">
+                        <input type="text" name="buscar_bebida" id="buscar_bebida" placeholder="Buscar una bebida" style="width:100%">
+                    </div>
+                    <ul class="icons" style="display:inline-block; float:right">
+                        <li>
+                            <a href="#" class="icon style2 fa-search">
+                                <span class="label">Búsqueda</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <br>
+                <section id ="menu_bebidas" class="tiles">
+                </section>
+                
+                <div id="teatro_2">
+                <dialog id="teatro_ver_bebida" class="site-dialog">
+                    <header class="dialog-header">
+                        <h1 id="nombre_bebida" style="display: inline">Nombre de la bebida</h1>
+                        <h1 id="precio_bebida" style="float: right; display: inline">$Precio</h1>
+                    </header>
+                        <div class="dialog-content">
+                            <span class="image fit"><img id="imagen_bebida" src="images/mesero_banner.jpg" alt=""></span>
+                            <p id="descripcion_bebida">Descripción detallada acerca de la bebida que esta observando.</p>
+                        </div>
+                        <div class="btn-group cf">
+                            <div class="12u$">
+                                <div class="select-wrapper">
+                                    <select name="cantidad-bebida" id="cantidad-bebida">
+                                        <option value="1">Cantidad: 1</option>
+                                        <option value="2">Cantidad: 2</option>
+                                        <option value="3">Cantidad: 3</option>
+                                        <option value="4">Cantidad: 4</option>
+                                        <option value="5">Cantidad: 5</option>
+                                        <option value="6">Cantidad: 6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            
+                            <div class="12u$">
+                                <div class="textarea-wrapper">
+                                    <textarea name="mensaje_bebida" id="mensaje_bebida" placeholder="Exprese aquí si tiene alguna sugerencia para recibir esta bebida, por ejemplo: nivel de azucar" rows="1" style="overflow: hidden; resize: none; height: 59px; font-size: 12px"></textarea>
+                                </div>
+                            </div>
+                            <div class="12u$">
+                                <ul class="actions">
+                                    <li><input id="PEDIR_BEBIDA" type="submit" value="Pedir bebida" class="special"></li>
+                                    <li><input id="cancel2" type="reset" value="Cancelar"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                    </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- DIVISION PARA EL ESTADO DEL PEDIDO-->
+            <div id="PANTALLA_ESTADO_PEDIDO" class="inner" style="display:none">
+                <header>
+                    <center>
+                        <p><b>Estado del pedido</b></p>
+                    </center>
+                </header>
+                <section id ="estado_pedido" class="tiles">
+                </section>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- DIVISION PARA LAS VALORACIONES-->
+            <div id="PANTALLA_VALORACIONES" class="inner" style="display:none">
+                <center>    
+                    <header>                    
+                        <p><b>Valorar un plato</b></p>
+                    </header>
+                    <section id ="valoraciones_pantalla">
+                        <figure>
+                            <img src="images/val.png">
+                        </figure>
+                        <p>Aquí podras realizar comentarios y valoraciones acerca<br> de los productos que hayas consumido en el restaurante</p>
+                    </section>
+                </center>
+                
+                <div id="teatro_comentarios">
+                    <dialog id="teatro_ver_producto" class="site-dialog">
+                        <header class="dialog-header">
+                            <h1 id="nombre_p" style="display: inline">Nombre del producto</h1>
+                            <h1 id="precio_p" style="float: right; display: inline">$Precio</h1>
+                        </header>
+                        <div class="dialog-content">
+                            <span class="image fit"><img id="imagen_p" src="images/mesero_banner.jpg" alt=""></span>
+                            <p id="descripcion_p">Descripción detallada acerca del producto que esta observando.</p>
+                        </div>
+                        <div class="btn-group cf">
+                            <div class="12u$">
+                                <div class="select-wrapper">
+                                    <select name="cantidad-p-e" id="cantidad-p-e">
+                                        <option value="5"> 5 Estrellas</option>
+                                        <option value="4"> 4 Estrellas</option>
+                                        <option value="3"> 3 Estrellas</option>
+                                        <option value="2"> 2 Estrellas</option>
+                                        <option value="1"> 1 Estrellas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            
+                            <div class="12u$">
+                                <div class="textarea-wrapper">
+                                    <textarea name="mensaje_p_comentario" id="mensaje_p_comentario" placeholder="Exprese aquí sus opiniones acerca del producto que ha recibido" rows="1" style="overflow: hidden; resize: none; height: 59px; font-size: 12px"></textarea>
+                                </div>
+                            </div>
+                            <div class="12u$">
+                                <ul class="actions">
+                                    <li><input id="COMENTAR" type="submit" value="VALORAR" class="special"></li>
+                                    <li><input id="cancel_comentar" type="reset" value="Cancelar"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                    </div>
+                
+            </div>
+
+
+
+
+
+
+            <!-- DIVISION PARA LA AYUDA-->
+            <div id="PANTALLA_AYUDA" class="inner" style="display:none">
+                <header>
+                    <center>
+                    <p><b>¿Como usar la aplicación?</b></p>
+                    </center>
+                </header>
+                <section id ="ayuda">
+                    <br>
+                    <p>Ayuda sobre como usar la aplicación</p>
+                    <p>Ayuda sobre como usar la aplicación</p>
+                    <p>Ayuda sobre como usar la aplicación</p>
+                    <p>Ayuda sobre como usar la aplicación</p>
+                </section>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="confirmarSalida">
+                <dialog id="teatro_conf_salida" class="site-dialog">
+                    <header class="dialog-header">
+                        <h1>Confirmación para salir</h1>
+                    </header>
+                    <div class="btn-group cf">
+                        <div class="6u 12u$(xsmall)">
+                            <input type="password" name="contra_cliente_salida" id="contra_cliente_salida" value="" placeholder="Contraseña de mesa">
+                        </div>
+                        <div class="12u$">
+                            <ul class="actions">
+                                <li><input id="salir_cliente" type="submit" value="Salir" class="button special fit small"></li>
+                                <li><input id="cancel_salida" type="reset" value="Cancelar" class="button fit small"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- Footer -->
+            <footer id="footer">
+                <div class="inner">
+                    <center>
+                        <section>
+                            <label >Restaurante el buen sabor</label>
+                        </section>
+                        <ul class="copyright">
+                            <li>Desarrollado por Z.R.J.C.E.</li>
+                        </ul>
+                    </center>
+		</div>
+            </footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+        ´<script src="../js/control.js"></script>
+        <script src="assets/js/transiciones.js"></script>
+        <script src="assets/js/funcionesApp.js"></script>
+        <script src="assets/js/datos.js"></script>
+        <script src="assets/js/controlVistaCliente.js"></script>
+        <script>
+        </script>
+    </body>
+</html>

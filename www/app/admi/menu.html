@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+	<title>Administración - Menu - Restaurante el buen sabor</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body>
+	<!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header">
+		<div class="inner">
+
+                    <!-- Logo -->
+                    <a class="logo">
+                        <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Administración</span>
+                    </a>
+
+                    <!-- Nav -->
+                    <nav>
+			<ul>
+                            <li><a href="#menu">Menu</a></li>
+			</ul>
+                    </nav>
+		</div>
+            </header>
+
+            
+            <!-- Menu -->
+            <nav id="menu">
+		<h2>Opciones</h2>
+                <ul>
+                    <li><a href="../administrador.html">Inicio</a></li>
+                    <li><a href="">Editar menu</a></li>
+                    <li><a id="lateral_clientes">Clientes</a></li>
+                    <li><a id="lateral_empleados">Empleados</a></li>
+                    <li><a id="lateral_historial">Historial de pedidos</a></li>
+                    <!--<li><a href="elements.html">Elements</a></li>-->
+                </ul>
+            </nav>
+
+            <!-- Main Inicio-->
+            <div class="main FOCO_PRINCIPAL" id="PANTALLA_INICIO">
+                <div class="inner pantalla_inicio_inicio foco">
+                    <header>
+                        <p>Bienvenido al panel de edición para administrador</p>                        
+                    </header>
+                    <hr>
+                    <a id="a_bot_ayuda_admi" class="button small fit">Ver ayuda</a>
+                    <section id="seccion_ayuda" style="display: none; align-content: center">
+                        <center>
+                            <h5>Opciones</h5>
+                            <p class="p_ayuda"><b>Inicio: </b>En esta sección podras ver las ayudas y configuraciones rapidas para los administradores, es donde se encuentra actualmente</p>
+                            <p class="p_ayuda"><b>Editar menu: </b>En esta sección podras configurar todo lo relacionado al menu, agregar plato, editar plato, eliminar plato y también editar los elementos del menu del }restaurante}</p>
+                            <p class="p_ayuda"><b>Clientes: </b>En esta sección podras configurar las mesas del restaurante, las cuales representan a los clientes del restaurante</p>
+                            <p class="p_ayuda"><b>Empleados: </b>En esta sección podras configurar los empleados meseros existentes en el restaurante; tambien, ver los pedidos recibidos por cada uno de ellos</p>
+                            <p class="p_ayuda"><b>Historial de pedidos: </b>En esta seccón podras ver un historial detallado de los pedidos que han hecho los clientes en el restaurante</p>
+                        </center>
+                    </section>
+                    <a id="a_bot_configuraciones_rap" class="button small fit">Configuraciones rapidas</a>
+                    <a id="a_bot_editar_perfil_admi" class="button small fit">Perfil administrador</a>
+		</div>
+                
+                <!--Division para la pantalla de configuraciones rapidas-->
+                <div class="inner pantalla_inicio_c_r" style="display: none">
+                    <header>
+                        <h3>Configuraciones rapidas</h3>
+                    </header>
+                    <br>
+                    <ul class="alt">
+                        <li class="lista">Código de registro para administrador</li>
+                        <li class="lista">Código de registro para meseros</li>
+                        <li class="lista">Cambiar contraseña</li>
+                    </ul>
+                </div>
+                
+                <!--Division para la pantalla de edicion del perfil de administrador-->
+                <div class="inner pantalla_inicio_e_p" style="display: none">
+                    <header>
+                        <h3>Perfil de administrador</h3>
+                    </header>
+                    <br>
+                    <ul class="alt">
+                        <li class="lista">Imagen de perfil</li>
+                        <li class="lista">Editar nombre</li>
+                        <li class="lista">Editar correo electronico</li>
+                        <li class="lista">Editar dirección</li>
+                        <li class="lista">Editar edad</li>
+                        <li class="lista">Cambiar contraseña</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            <!--Menu principal-->
+            <div class="main" id="PANTALLA_MENU"  style="display: none">
+                <div class="inner pantalla_menu_">
+                    <header>
+                        <p>Menu del restaurante</p>
+                    </header>
+                    <hr>
+                    <a id="a_bot_menu_agregar" class="button small fit">Agregar Elementos al menu</a>
+                    <a id="a_bot_menu_editar" class="button small fit">Editar Elementos al menu</a>
+                    <a id="a_bot_menu_eliminar" class="button small fit">Eliminar elementos del menu</a>
+                    <a id="a_bot_menu_ver" class="button small fit">Ver menu</a>
+		</div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- Footer -->
+            <footer id="footer">
+		<!--Para la pantalla de inicio-->
+                <div class="inner pantalla_inicio_inicio foco">
+                    <center>
+                        <section>
+                            <label >Restaurante el buen sabor</label>    
+                        </section>
+                        <ul class="copyright">
+                            <li>Desarrollado por Z.R.J.C.E.</li>
+                        </ul>
+                    </center>
+		</div>
+                <!--Para la pantalla de conf rapidas-->
+                <div class="inner pantalla_inicio_c_r" style = "display: none">
+                    <section>
+                        <a class="volver_atras button fit">Volver atras</a>
+                    </section>
+		</div>
+                
+                <!--Para la pantalla de conf rapidas-->
+                <div class="inner pantalla_inicio_e_p" style = "display: none; width: 100%">
+                    <section>
+                        <a class="volver_atras button fit">Volver atras</a>
+                    </section>
+		</div>
+            </footer>
+
+	</div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+        <script src="assets/js/controlVista.js"></script>
+    </body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+	<title>Administración - Restaurante el buen sabor</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/transiciones.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body>
+	<!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header">
+		<div class="inner">
+
+                    <!-- Logo -->
+                    <a class="logo">
+                        <span class="symbol"><img src="images/avatar.jpg" alt="" /></span><span id="nombre_ad" class="title">Administrador: </span>
+                    </a>
+
+                    <!-- Nav -->
+                    <nav>
+			<ul>
+                            <li><a href="#menu">Menu</a></li>
+			</ul>
+                    </nav>
+		</div>
+            </header>
+            
+            
+            <!-- Menu -->
+            <nav id="menu">
+		<h2>Opciones</h2>
+                <ul>
+                    <li><label id="lateral_inicio">Inicio</label></li>
+                    <li><label id="lateral_menu" >Editar menú</label></li>
+                    <li><label id="lateral_clientes">Clientes - mesas</label></li>
+                    <li><label id="lateral_empleados">Meseros</label></li>
+                    <li><label id="lateral_historial">Comentarios y valoraciones</label></li>
+                    <li><label class="lat_cerrar_sesion">Cerrar sesión</label></li>
+                    <!--<li><a href="elements.html">Elements</a></li>-->
+                </ul>
+            </nav>
+
+            <div id="inicio_datos"></div>
+            <div id="servidor"></div>
+            <div id="servidor_datos"></div>
+            
+            <!-- Main Inicio-->
+            <div id="PANTALLA_INICIO" class="main FOCO_PRINCIPAL">
+                <div class="inner pantalla_inicio_inicio foco">
+                    <center>
+                        <img id="img_principal" class="centrado" src="images/admi_ban.png" width="100" height="100">
+                    </center>
+                    <hr>
+                    
+                    <a id="a_bot_configuraciones_rap" class="button small fit">Configuraciones</a>
+                    <a id="a_bot_editar_perfil_admi" class="button small fit">Editar datos de administrador</a>
+                    <a id="a_bot_ayuda_admi" class="button small fit">Ver ayuda</a>
+                    <section id="seccion_ayuda" style="display: none; align-content: center">
+                        <center>
+                            <h5>Opciones</h5>
+                            <p class="p_ayuda"><b>Inicio: </b>En esta sección podrás ver las ayudas y configuraciones rapidas para los administradores, es donde se encuentra actualmente</p>
+                            <p class="p_ayuda"><b>Editar menú: </b>En esta sección podrás configurar todo lo relacionado al menu, agregar plato, editar plato, eliminar plato y también editar los elementos del menu del }restaurante}</p>
+                            <p class="p_ayuda"><b>Clientes - mesas: </b>En esta sección podrás configurar las mesas existentes (agregar o eliminar mesas), las cuales representan a los clientes del restaurante</p>
+                            <p class="p_ayuda"><b>Meseros: </b>En esta sección podrás ver el trabajo de los meseros existentes en el restaurante; también, ver los pedidos recibidos por cada uno de ellos</p>
+                            <p class="p_ayuda"><b>Historial de pedidos: </b>En esta seccón podrás ver un historial detallado de los pedidos que han hecho los clientes en el restaurante</p>
+                        </center>
+                    </section>
+		</div>
+                
+                
+                <!--Division para la pantalla de configuraciones rapidas-->
+                <div class="inner pantalla_inicio_c_r" style="display: none">
+                    <header>
+                        <h3>Configuraciones</h3>
+                    </header>
+                    <br>
+                    <ul class="alt">
+                        <li id="bot_conf_cod_adm" class="lista">Cambiar código de registro para administrador</li>
+                        <li id="bot_conf_cod_mes" class="lista">Cambiar código de registro para meseros</li>
+                        <li id="bot_conf_contr" class="lista">Cambiar contraseña</li>
+                    </ul>
+                    <!-- Teatro para codigo de admi-->
+                    <dialog id="teatro_conf_cod_adm" class="site-dialog">
+                        <header class="dialog-header">
+                            <h1>Nuevo código de registro para administrador</h1>
+                        </header>
+                        <div class="btn-group cf">
+                            <div class="6u 12u$(xsmall)">
+                                <input type="text" name="nuevo_codigo_admi" id="nuevo_codigo_admi" value="" placeholder="Código">
+                            </div>
+                            <div class="12u$">
+                                <ul class="actions">
+                                    <li><input id="cam_cod_adm" type="submit" value="Cambiar" class="button special fit small"></li>
+                                    <li><input id="cancel_cam_cod_adm" type="reset" value="Cancelar" class="button fit small"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                    <!-- Teatro para codigo de mesero-->
+                    <dialog id="teatro_conf_cod_mes" class="site-dialog">
+                        <header class="dialog-header">
+                            <h1>Nuevo código de registro para mesero</h1>
+                        </header>
+                        <div class="btn-group cf">
+                            <div class="6u 12u$(xsmall)">
+                                <input type="text" name="nuevo_codigo_mese" id="nuevo_codigo_mese" value="" placeholder="Código">
+                            </div>
+                            <div class="12u$">
+                                <ul class="actions">
+                                    <li><input id="cam_cod_mes" type="submit" value="Cambiar" class="button special fit small"></li>
+                                    <li><input id="cancel_cam_cod_mes" type="reset" value="Cancelar" class="button fit small"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                    <!-- Teatro para cambiar la contraseña-->
+                    <dialog id="teatro_camb_cont" class="site-dialog">
+                        <header class="dialog-header">
+                            <h1>Cambiar contraseña de usuario</h1>
+                        </header>
+                        <div class="btn-group cf">
+                            <div class="6u 12u$(xsmall)">
+                                <input type="password" name="camb_cont_ant" id="camb_cont_ant" value="" placeholder="Antigua contraseña">
+                            </div>
+                            <div class="6u 12u$(xsmall)">
+                                <input type="password" name="camb_cont_nue" id="camb_cont_nue" value="" placeholder="Nueva contraseña">
+                            </div>
+                            <div class="12u$">
+                                <ul class="actions">
+                                    <li><input id="camb_cont" type="submit" value="Cambiar" class="button special fit small"></li>
+                                    <li><input id="cancel_camb_cont" type="reset" value="Cancelar" class="button fit small"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                </div>
+                
+                <!--Division para la pantalla de edicion del perfil de administrador-->
+                <div class="inner pantalla_inicio_e_p" style="display: none">
+                    <header>
+                        <h3>Datos de administrador</h3>
+                    </header>
+                    <br>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div id = "edicion_datos" >
+                        <center>
+                        <div id="img_perfil" style="display: none">
+                            <form id="formulario_imagen" enctype = 'multipart/form-data'>
+                                <div class="6u 12u$(small)">
+                                    <p style="margin-bottom:2px">Elige una imagen</p>
+                                    <input type='hidden' name='MAX_FILE_SIZE' value='1000000' />
+                                    <input type='file' accept='image/*'  id="img_perfil_a_subir" name='img_perfil_a_subir'>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div id="nombre" style="display: none">
+                            <div class="6u 12u$(xsmall)">
+                                <input type="text" name="perfil_nombre" id="perfil_nombre" value="" placeholder="Nombre">
+                            </div>
+                        </div>
+                        
+                        <div id="correo" style="display: none">
+                            <div class="6u 12u$(xsmall)">
+                                <input type="text" name="perfil_correo" id="perfil_correo" value="" placeholder="Correo">
+                            </div>
+                        </div>
+                        
+                        <div id="direccion" style="display: none">
+                            <div class="6u 12u$(xsmall)">
+                                <input type="text" name="perfil_direccion" id="perfil_direccion" value="" placeholder="Dirección">
+                            </div>
+                        </div>
+                        
+                        <div id="edad" style="display: none">
+                            <div class="6u 12u$(xsmall)">
+                                <p>Fecha de nacimiento</p>
+                                <input type="date" name="perfil_fecha" id="perfil_fecha" value="">
+                            </div>
+                        </div>
+                        </center>
+                        <br>
+                        <div id="boton_guardar"></div>
+                    </div>
+                    
+                    
+                    <ul class="alt">
+                        <!--<li onclick="editarDato(1)" class="lista">Imagen de perfil</li>-->
+                        <li onclick="editarDato(2)" class="lista">Editar nombre</li>
+                        <li onclick="editarDato(3)" class="lista">Editar correo electronico</li>
+                        <li onclick="editarDato(4)" class="lista">Editar dirección</li>
+                        <!--<li onclick="editarDato(5)" class="lista">Editar edad</li>-->
+                    </ul>
+                    
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            <!--Menu principal-->
+            <div class="main" id="PANTALLA_MENU"  style="display: none">
+                <div class="inner pantalla_menu_inicio">
+                    <header>
+                        <p><b>Menú del restaurante</b></p>
+                    </header>
+                    <hr>
+                    <a id="a_bot_menu_agregar" class="button small fit">Agregar Elementos al menú</a>
+                    <a id="a_bot_menu_editar" class="button small fit">Editar Elementos al menú</a>
+                    <a id="a_bot_menu_eliminar" class="button small fit">Eliminar elementos del menú</a>
+                    <a id="a_bot_menu_ver" class="button small fit">Ver menú</a>
+		</div>
+                
+                <!--Division para Agregar elementos al menu-->
+                <div class="inner pantalla_menu_agregar" style="display: none">
+                    <header>
+                        <p><b>Agragar plato(s) y bebida(s)</b></p>
+                    </header>
+                    <section>
+                        <form id="formulario_agregar_plato" enctype = 'multipart/form-data'>
+                            <div class="row uniform">
+                                <div class="12u$">
+                                    <div class="select-wrapper">
+					<select name="tipo_elimento" id="tipo_elimento">
+                                            <option value="0">Tipo de alimento</option>
+                                            <option value="1">Plato</option>
+                                            <option value="2">Bebida</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+				<div class="6u 12u$(xsmall)">
+                                    <input type="text" name="al-nombre" id="al-nombre" value="" placeholder="Nombre">
+				</div>
+                                <div class="12u$">
+                                    <div class="textarea-wrapper"><textarea name="al-descripcion" id="al-descripcion" placeholder="Descripción acerca del producto que desea agregar" rows="1" style="overflow: hidden; resize: none; height: 59px;"></textarea></div>
+                                </div>
+				<div class="6u 12u$(xsmall)">
+                                    <input type="number" name="al-precio" id="al-precio" value="" placeholder="Precio para el publico">
+				</div>
+                                <div class="6u 12u$(small)">
+                                    <p style="margin-bottom:2px">Elige una imagen del producto</p>
+                                    <input type='hidden' name='MAX_FILE_SIZE' value='1000000' />
+                                    <input type='file' accept='image/*'  id="img_ali_a_subir" name='img_ali_a_subir'>
+                                    <!--<input type='file' accept='image/*' value='' id='img_trabajo_a_subir' name='img_trabajo_a_subir'>-->
+                                    <!--    <input id = 'inputImg' type ='submit' value ='Subir'>-->
+				</div>
+                                
+				<div class="12u$">
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Guardar" class="special"></li>
+                                        <li><input id="limpiar_nuevo_alimento" type="reset" value="Limpiar"></li>
+                                    </ul>
+				</div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                
+                <!--Division para Editar elementos del menu-->
+                <div class="inner pantalla_menu_editar" style="display: none">
+                    <header>
+                        <p><b>Editar plato(s) y bebida(s)</b></p>
+                    </header>
+                    <section>                        
+                        <div id="editar_menu_admi"></div>
+                    </section>
+                    <div id="teatro_editar">
+                    <dialog id="teatro_editar_alimento" class="site-dialog">
+                        <header class="dialog-header">
+                            <h1 id="nombre_alimento_editar" style="display: inline">Nombre del producto</h1>
+                        </header>
+                        <div class="dialog-content">
+                            <form id="formulario_edicion_producto">
+                                <span class="image fit"><img width="200" id="imagen_alimento_editar" src="imagesmesero_banner.jpg" alt=""></span>
+
+                                <div class="6u 12u$(xsmall)">
+                                    <input type="text" name="al-nombre_editar" id="al-nombre_editar" value="" placeholder="Nombre">
+                                </div>
+                                <div class="12u$">
+                                    <div class="textarea-wrapper"><textarea name="al-descripcion_editar" id="al-descripcion_editar" placeholder="Descripción acerca del producto" rows="1" style="overflow: hidden; resize: none; height: 59px;"></textarea></div>
+                                </div>
+                                <div class="6u 12u$(xsmall)">
+                                    <input type="number" name="al-precio_editar" id="al-precio_editar" value="" placeholder="Precio para el publico">
+                                </div>
+                                <div class="6u 12u$(small)">
+                                    <p style="margin-bottom:2px">Elige una imagen para cambiar</p>
+                                    <input type='hidden' name='MAX_FILE_SIZE' value='1000000' />
+                                    <input type='file' accept='image/*'  id="img_ali_a_subir_editar" name='img_ali_a_subir_editar'>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="btn-group cf">
+                            <div class="12u$">
+                                <ul class="actions">
+                                    <li><input id="guardar_edicion" type="submit" value="Guardar" class="special"></li>
+                                    <li><input id="cancel_editar" type="reset" value="Cancelar"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                    </div>
+                </div>
+                
+                
+                <!--Division para Eliminar elementos al menu-->
+                <div class="inner pantalla_menu_eliminar" style="display: none">
+                    <header>
+                        <p><b>Eliminar plato(s) y bebida(s)</b></p>
+                    </header>
+                    <section>                        
+                        <div id="eliminar_menu_admi"></div>
+                    </section>
+                </div>
+                
+                <!--Division para Ver todos los elementos al menu-->
+                <div class="inner pantalla_menu_ver" style="display: none">
+                    <header>
+                        <p><b>Menú del restaurante</b></p>
+                    </header>
+                    <section>                        
+                        <div id="ver_menu_admi"></div>
+                    </section>
+                </div>
+            </div>
+            
+            
+            
+            
+            <!--MESAS Y CLIENTES-->
+            <div class="main" id="PANTALLA_CLIENTES"  style="display: none">
+                <div class="inner pantalla_cliente_inicio">
+                    <header>
+                        <p><b>Gestión de mesas - clientes</b></p>
+                    </header>
+                    <hr>
+                    <a id="a_bot_cliente_agregar" class="button small fit">Agregar mesa</a>
+                    <a id="a_bot_cliente_eliminar" class="button small fit">Eliminar mesa</a>
+                    <a id="a_bot_cliente_listar" class="button small fit">Ver mesa(s)</a>
+		</div>
+                
+                <!--Division para la pantalla de agregar cliente-->
+                <div class="inner pantalla_cliente_agregar" style="display: none">
+                    <header>
+                        <p><b>Agregar mesa(s)</b></p>
+                    </header>
+                    <section>
+                        <div class="6u 12u$(xsmall)">
+                            <input type="text" name="nombre_mesa_nueva" id="nombre_mesa_nueva" value="" placeholder="Nombre de la mesa (ej: Mesa #1)">
+                        </div>
+                        <div class="6u 12u$(xsmall)">
+                            <input type="text" name="<contra_mesa_nueva" id="contra_mesa_nueva" value="" placeholder="Contraseña para inicio de sesión">
+                        </div>
+                        <br/>
+                        <div class="12u$">
+                            <ul class="actions">
+                                <li><input id="agregar_mesa_nueva" type="submit" value="Agragar" class="button special fit small"></li>
+                            </ul>
+                        </div>
+                        
+                        <p><b>Mesas actuales:</b></p>
+                        <div id="mesas_actuales_admi"></div>
+                    </section>
+                </div>
+                
+                <!--Division para eliminar clientes-->
+                <div class="inner pantalla_cliente_eliminar" style="display: none">
+                    <header>
+                        <p><b>Eliminar mesa(s)</b></p>
+                    </header>
+                    <section>                        
+                        <div id="mesas_actuales_eliminar_admi"></div>
+                    </section>
+                </div>
+                
+                <!--Division para Listar las mesas existentes-->
+                <div class="inner pantalla_cliente_listar" style="display: none">
+                    <header>
+                        <p><b>Mesas del restaurante:</b></p>
+                    </header>
+                    <section>                        
+                        <div id="mesas_actuales_listar_admi"></div>
+                    </section>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <!--Meseros-->
+            <div class="main" id="PANTALLA_MESEROS"  style="display: none">
+                <div class="inner pantalla_meseros_">
+                    <header>
+                        <p><b>Meseros del restaurante</b></p>
+                    </header>
+                    <hr>
+                    <section id="meseros_admi">
+                        
+                    </section>
+		</div>
+            </div>
+            
+            
+            
+            <!--Historial de pedidos-->
+            <div class="main" id="PANTALLA_HISTORIAL"  style="display: none">
+                <div class="inner pantalla_historial_">
+                    <header>
+                        <p><b>Comentarios y valoraciones</b></p>
+                    </header>
+                    <hr>
+                    <section id="comentarios_clientes">
+                        
+                    </section>
+		</div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- Footer -->
+            <footer id="footer">
+		<!--Para la pantalla de inicio-->
+                <div class="inner foco">
+                    <center>
+                        <section>
+                            <label >Restaurante el buen sabor</label>
+                            <a id="volver_atras_inicio" style="display:none" class="button fit">Volver atras</a>
+                            <a id="volver_atras_cliente" style="display:none" class="button fit">Volver atras</a>
+                            <a id="volver_atras_menu" style="display:none" class="button fit">Volver atras</a>
+                        </section>
+                        <ul class="copyright">
+                            <li>Desarrollado por Z.R.J.C.E.</li>
+                        </ul>
+                    </center>
+		</div>
+            </footer>
+
+	</div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+        <script src="../js/control.js"></script>
+        <script src="assets/js/funcionesApp.js"></script>
+        <script src="assets/js/datos.js"></script>
+        <script src="assets/js/controlVista.js"></script>
+        <script src="assets/js/transiciones.js"></script>
+
+    </body>
+</html>

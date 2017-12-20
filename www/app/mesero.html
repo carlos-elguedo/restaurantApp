@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+	<title>Mesero - Restaurante el buen sabor</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/transiciones.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body>
+	<!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header">
+		<div class="inner">
+
+                    <!-- Logo -->
+                    <a class="logo">
+                        <span class="symbol"><img src="images/avatar.jpg" alt="" /></span><span id="nombre_me" class="title">Mesero:</span>
+                    </a>
+
+                    <!-- Nav -->
+                    <nav>
+			<ul>
+                            <li><a href="#menu">Menu</a></li>
+			</ul>
+                    </nav>
+		</div>
+            </header>
+            <div id="admi_pedidos"></div>
+            
+            <!-- Menu -->
+            <nav id="menu">
+		<h2>Opciones</h2>
+                <ul>
+                    <li><label id="lateral_mesa_inicio" >Inicio</label></li>
+                    <li><label id="lateral_mesa_pedidos" >Administrar pedidos</label></li>
+                    <li><label id="lateral_mesa_clientes">Clientes</label></li>
+                    <!--<li><label id="lateral_mesa_historial">Historial de pedidos</label></li>-->
+                    <li><label class="lat_cerrar_sesion">Cerrar sesión</label></li>
+                    <!--<li><a href="elements.html">Elements</a></li>-->
+                </ul>
+            </nav>
+            <!--Divisiones para respuestas del servidor-->
+            <div id="inicio_datos"></div>
+            <div id="servidor"></div>
+            <div id="servidor_datos"></div>
+            <!-- Main Inicio-->
+            <div id="PANTALLA_INICIO_MESERO" class="main FOCO_PRINCIPAL">
+                <div class="inner pantalla_inicio_inicio_m foco">
+                    <header>             
+                        <CENTER>
+                        <h4>INICIO</h4>
+                        </CENTER>
+                        <h5 class="cantidad_pedidos_superior"></h5>
+                    </header>
+                    <hr>
+                    <center>
+                        <img id="img_principal" class="centrado" src="images/mesero_ban_1.png" width="100" height="100">
+                    </center>
+                    <a id="a_bot_editar_perfil_mesero" class="button fit">Editar datos de mesero</a>
+                    <a id="a_bot_ayuda_mesero" class="button small fit">Ver ayuda</a>
+                    <section id="seccion_ayuda_mesero" style="display: none; align-content: center">
+                        <center>
+                            <h5>Opciones</h5>
+                            <p class="p_ayuda"><b>Inicio: </b>En esta sección podrás ver la ayuda para las diferentes opciones, Gestionar las mesas para cambiar la aplicación a modo cliente, editar sus datos de mesero y ver alertas al recibir pedidos</p>
+                            <p class="p_ayuda"><b>Administrar pedidos: </b>En esta sección podras recibir y confirmar los pedidos recibidos por parte de los clientes ubicados en las mesas</p>
+                            <p class="p_ayuda"><b>Clientes: </b>En esta sección podrás ver los clientes activos y sus pedidos realizados</p>
+                            <p class="p_ayuda"><b>Historial de pedidos: </b>En esta sección podrás ver un historial detallado de los pedidos que han hecho los clientes en el restaurante</p>
+                        </center>
+                    </section>
+                    
+		</div>
+                
+                <!--Division para la pantalla de edicion del perfil de administrador-->
+                <div class="inner pantalla_inicio_e_p_m" style="display: none">
+                    <header>
+                        <h3>Editar datos del perfil</h3>
+                    </header>
+                    <br>
+                    <div id = "edicion_datos" >
+                        <center>
+                            
+                        <div id="nombre" style="display: none">
+                            <div class="6u 12u$(xsmall)">
+                                <input type="text" name="perfil_nombre" id="perfil_nombre" value="" placeholder="Nombre">
+                            </div>
+                        </div>
+                        
+                        <div id="correo" style="display: none">
+                            <div class="6u 12u$(xsmall)">
+                                <input type="text" name="perfil_correo" id="perfil_correo" value="" placeholder="Correo">
+                            </div>
+                        </div>
+                        
+                        <div id="direccion" style="display: none">
+                            <div class="6u 12u$(xsmall)">
+                                <input type="text" name="perfil_direccion" id="perfil_direccion" value="" placeholder="Dirección">
+                            </div>
+                        </div>
+                            
+                        </center>
+                        <br>
+                        <div id="boton_guardar"></div>
+                    </div>
+                    <ul class="alt">
+                        <!--<li class="lista">Imagen de perfil</li>-->
+                        <li onclick="editarDato(1)" class="lista">Editar nombre</li>
+                        <li onclick="editarDato(2)" class="lista">Editar correo electronico</li>
+                        <li onclick="editarDato(3)" class="lista">Editar dirección</li>
+                        <!--<li class="lista">Editar edad</li>-->
+                        <!--<li class="lista">Cambiar contraseña</li>-->
+                    </ul>
+                </div>
+            </div>
+             
+            
+            
+            
+            
+            <!--PANTALLA PARA ADMINISTRAR LOS PEDIDOSS-->
+            <div id="PANTALLA_PEDIDOS_MESERO" class="main" style="display: none">
+                <center><p style="margin-bottom: 0;"><b>Administración</b></p></center>
+                <hr style="margin-top: 0px;">
+                <div class="inner">
+                    <header>
+                        <center>
+                        <p><b>Pedidos Activos</b></p>
+                        </center>
+                        <h5 class="cantidad_pedidos_superior"></h5>
+                    </header>
+                    <section>
+                        <div id="pedidosActivosDivision"></div>
+                    </section>
+                    
+                    <div id="teatro_m1">
+                    <dialog id="teatro_detalles_pedidos" class="site-dialog">
+                        <header class="dialog-header">
+                            <h1 style="display: inline">Detalles del pedido</h1>
+                            <h1 id="mesa_pedido_activo" style="float: right; display: inline"></h1>
+                        </header>
+                        <div id="descripcion_pedido_productos" class="dialog-content">
+                            
+                        </div>
+                        <div class="btn-group cf">
+                            <div class="12u$">
+                                <ul class="actions">
+                                    <li><input id="cancel_pedido_activo" type="reset" value="Cerrar"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                    </div>
+                    
+                    
+                    <div id="teatro_m2">
+                    <dialog id="teatro_entragar_pedidos" class="site-dialog">
+                        <header class="dialog-header">
+                            <h1 style="display: inline">Entraga de pedido</h1>
+                            <h1 id="mesa_pedido_entragar" style="float: right; display: inline"></h1>
+                        </header>
+                        <div id="descripcion_pedido_productos_entragar" class="dialog-content"></div>
+                        <div class="btn-group cf">
+                            <div class="12u$">
+                                <ul class="actions">
+                                    <li><input id="cancel_entregar_pedido" type="reset" value="Cerrar"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <div class="inner">
+                    <header>
+                        <center>
+                        <p><b>Pedidos atendidos</b></p>
+                        </center>
+                    </header>
+                    <section>
+                        <div id="pedidosAtendidosDivision"></div>
+                    </section>
+                </div>
+            </div>
+            
+            
+            
+            
+            <!--PANTALLA PARA GESTIONAR LOS CLIENTES-->
+            <div id="PANTALLA_CLIENTES_MESERO" class="main" style="display: none">
+                <div class="inner">
+                    <header>
+                        <center>
+                        <p><b>Mesas - Clientes</b></p>
+                        </center>
+                    </header>
+                    <h5 class="cantidad_pedidos_superior"></h5>
+                    <section>
+                        <div id="clintesActivosDivision"></div>
+                    </section>
+                </div>
+            </div>
+            
+            
+            
+            
+            <!--PANTALLA PARA VER EL HISTORIAL DE PEDIDOS-->
+            <div id="PANTALLA_HISTORIAL_MESERO" class="main" style="display: none">
+                <div class="inner">
+                    <header>
+                        <p><b>Historial de pedidos</b></p>
+                    </header>
+                    <h5 class="cantidad_pedidos_superior"></h5>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <!-- Footer -->
+            <footer id="footer">
+		<!--Para la pantalla de inicio-->
+                <div class="inner foco">
+                    <center>
+                        <section>
+                            <label >Restaurante el buen sabor</label>
+                            <a id="volver_atras_inicio_mesero" style="display:none" class="button fit">Volver atras</a>
+                        </section>
+                        <ul class="copyright">
+                            <li>Desarrollado por Z.R.J.C.E.</li>
+                        </ul>
+                    </center>
+		</div>
+            </footer>
+            
+            <div id="alerta_pedidos"></div>
+	</div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+        ´<script src="../js/control.js"></script>
+        <script src="assets/js/transiciones.js"></script>
+        <script src="assets/js/funcionesApp.js"></script>
+        <script src="assets/js/datos.js"></script>
+        <script src="assets/js/controlVistaMesero.js"></script>
+    </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="author" content="Zamir Martelo, Rafael Castellar, Jonhy Luna"/>    
+	<link rel="stylesheet" href="css/estilos.css">
+	<title id="titulo-pagina">My restaurante</title>
+    </head>
+    <body>
+	<!-- Division para colocar las respuestas desde el servidor-->
+	<div id="respuestas"></div>
+	<!-- Division para colocar los mensajes de carga-->
+	<div id="mensajes"></div>
+	<!Pantalla de intro->
+        <div id="intro" class="contenedor-formulario" style="display:none">
+            <div class="wrap">
+                <center>
+                    <img src="img/fondoIntro.png">
+                    <h3 class="titulo_h">Restaurante el buen sabor</h3>
+                </center>
+            </div>
+        </div>
+        
+        <!-- Esta division contendra el formulario de nuestra aplicacion-->
+	<div id="principal" class="contenedor-formulario" style = "display:none">
+            <!-- La division que contiene la pantalla de log in, entrada-->
+            <center>
+                <h3 class="titulo_h">Restaurante el buen sabor</h3>
+                <img id="img_principal" class="centrado" src="img/fondoIntro.png" width="100" height="100">
+            </center>
+            <div class="wrap" id="acceso" >
+                <!-- Formulario de inicio de sesión-->
+		<form action="" class="formulario" name="formulario_acceso" id="formulario_acceso">
+                <div>
+                    <div class="opcion">
+			<label class="label" id="lab-acceso-desc"><b>Acceso al restaurante</b></label>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <!-- Esta division contiene el dato de entrada correo o telefono que ingresara el usuario-->
+                    <div class="input-group">
+                        <input type="text" id="dato_de_acceso" name="dato_de_acceso">
+                        <label class="label" for="dato-de_acceso" id="lab-acceso-nombre" >Correo electrónico o nombre de mesa</label>
+                    </div>
+                    <!-- Esta division contiene el dato de entrada contraseña que ingresara el usuario-->
+                    <div class="input-group">
+			<input type="password" id="pass_acceso" name="pass_acceso">
+			<label class="label" for="pass_acceso" id="lab-acceso-contra">Contraseña</label>
+                    </div>
+                    <!-- Aqui esta el boton de entrada a la aplicacion-->
+                    <input type="submit" id="btn-submit-inicio-sesion" value="Ingresar">
+                    <!-- Esta division contiene el enlace a ir a recuperar la contraseña-->
+                    <div class="input-group opcion">
+			<a href="#">
+                            <label class="label" for="olvido" id="lab-acceso-olvido">Recuperar contraseña</label>
+			</a>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <!-- Esta division estara siempre abajo y es el enlace para registrarse-->
+                    <div>
+			<button id="btn-registrarse" class="boton-secundario">Registrarse</button>
+                    </div>
+					
+                <!-- Fin de la division que cntiene las divisiones(campos) del formulario-->
+		</div>
+			<!-- Fin del formulario de inicio de sesion-->
+                </form>
+            <!-- Fin de la division wrap de acceso, inicio de sesion-->
+            </div>
+
+            <!--Formulario registro-->
+            <div class="wrap" id="registro" style="display:none;">
+                <!-- Formulario de registro para los nuevos usuarios-->
+            	<form class="formulario" name="formulario_registro" id="formulario_registro">
+                    <!-- Division que contendra los elementos del formulario-->
+                    <div>
+                        <div class="opcion">
+                            <label class="label" id="lab-acceso-desc"><b>Registro para meseros y administrador(s)</b></label>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <!--Esta division le dara informacion al usuario para el registro-->
+                        <div class="input-group">
+                            <select name="registrar-usando" id="registrar-usando">
+				<option id="registrar-usando-opcion-1" value="0">Tipo de usuario a registrar</option>
+				<option id="registrar-usando-opcion-2" value="1">Registrar administrador</option>
+				<option id="registrar-usando-opcion-3" value="2">Registrar mesero</option>
+                            </select>
+			</div>										
+			<!-- Division para pedir el correo electronico del nuevo usuario-->
+			<div class="input-group" id="escogio" style="display:none;">
+                            <input type="text" id="codigo_reg" name="codigo_reg">
+                            <label class="label" for="codigo_reg" id="lab-registro-codigo">Código para registro de administrador:</label>
+			</div>
+					
+                        <div class="input-group">
+                            <input type="email" id="registro_correo" name="registro_correo">
+                            <label class="label" for="registro_correo" id="lab-reg-correo" >Ingrese el correo eléctrónico</label>
+                        </div>
+                        <!-- Esta division contiene el dato nombre de registro del usuario-->
+                        <div class="input-group">
+                            <input type="text" id="registro-nombre" name="registro-nombre">
+                            <label class="label" for="registro-nombre" id="lab-reg-nombre" >Ingrese su nombre</label>
+			</div>
+                        <!-- Esta division contiene el dato dirección de registro del usuario-->
+                        <div class="input-group">
+                            <input type="text" id="registro-direccion" name="registro-direccion">
+                            <label class="label" for="registro-direccion" id="lab-reg-direccion" >Dirección</label>
+			</div>                    
+			<!-- Division que pedira la contraseña al usuario-->
+			<div class="input-group">
+                            <input type="password" id="registro-pass" name="registro-pass">
+                            <label class="label" for="registro-pass" id="lab-reg-pass">Contraseña:</label>
+			</div>
+			<!-- Division que contiene la aceptacion de terminos por parte del usuario-->
+			<div class="input-group checkbox">
+                            <input type="checkbox" name="terminos" id="terminos" value="true">
+                            <label for="terminos" id="lab-reg-terminos">Aceptar los Terminos y Condiciones</label>						
+			</div>
+			<!-- Division que contiene un enlacepara que el usuario pueda leer los terminos-->
+			<div class="input-group">
+                            <a href="http://localhost/apprestaurante/www/app/terminos.html" target="black">
+				<label id="lab-registro-leer-terminos">Leer los terminos</label>
+                            </a>
+			</div>
+			<!-- Boton para enviar los datos del usuario-->
+			<input type="submit" id="btn-submit-registro" value="Enviar registro">
+			<br/>
+			<br/>
+			<!-- Boton para volver a la pantalla de inicio de sesion-->
+                        <button id="btn-salir-registro" class="boton-secundario">Volver atrás</button>
+			<!-- Fin de la division que contiene los elemntos del formulario-->
+                    </div>
+                <!-- Fin del formulario de registro-->
+                </form>
+            <!-- Fin de la division de registro, que contiene la pantalla del formulario de registro-->
+            </div>	
+	
+	<!-- Fin del contenedor de formulario-->
+	</div>
+
+	<!-- Archivos javascrips para controlar el funcionamiento de la app-->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<!--<script src= "js/lib/idioma.js"></script>-->
+	<script src="js/control.js"></script>
+	<script src= "js/formulario.js"></script>			
+	
+
+
+<!-- Fin del body-->
+</body>
+</html>
