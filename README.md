@@ -1,7 +1,11 @@
-#Agenda
+#App Restaurante
 
-Este proyecto añade la funcionalidad de gestionar una agenda academica de actividades, a una plataforma estudiantil de Moodle
+Proyecto para la gestión de los eventos en un restaurante, eventos como:
+	REALIZAR UN PEDIDO
+	RECIBIR UN PEDIDO
+	GESTIONAR UN MENÚ - AÑADIR, ELIMINAR Y EDITAR PLATOS Y BEBIDAS
+	ENTRE OTRAS FUNCIONES
 
-Autor:	Carlos Elguedo - jorge Hernandez
-Año:	2018
+Autor:	Carlos Elguedo
+Año:	2017
 
