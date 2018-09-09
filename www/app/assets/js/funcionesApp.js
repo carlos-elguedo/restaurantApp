@@ -69,7 +69,7 @@ function mesasActualesAdmi(division){
             $("#mesas_actuales_admi").html(res);
         }
         if(division == 2){
-            console.log("************");
+            //console.log("************");
             $("#mesas_actuales_listar_admi").html("");
             $("#mesas_actuales_listar_admi").html(res);
         }
